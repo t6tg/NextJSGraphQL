@@ -5,7 +5,6 @@ import mongoose from "mongoose";
 dotenv.config();
 
 const { PORT, DB_NAME, DB_Password, DB_USER } = process.env;
-
 const createServer = async () => {
   try {
     const app = express();

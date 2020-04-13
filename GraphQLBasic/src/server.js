@@ -3,7 +3,7 @@ import { ApolloServer } from "apollo-server-express";
 import fs from "fs";
 import path from "path";
 const typeDefs = fs
-  .readFileSync(path.join(__dirname, "./schema/schema.graphql"), "utf8")
+  .readFileSync(path.join(__dirname, "./schema/schema.gql"), "utf8")
   .toString();
 import resolvers from "./resolvers/";
 

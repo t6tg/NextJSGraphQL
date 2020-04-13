@@ -1,12 +1,12 @@
 import mongoose from "mongoose";
 
-const userSchema = new mongoose.Schema({
-  name: { type: String, required: true, unique: true },
+const cartItemSchema = new mongoose.Schema({
+  product: { type: String, required: true, unique: true },
   email: { type: String, required: true, lowercase: true, trim: true },
   password: { type: String, required: true, trim: true },
   products: [{ type: mongoose.Schema.Types.ObjectId, ref: "Product" }],
   createdAt: { type: Date, required: true, default: () => Date.now() },
 });
 
-const User = mongoose.model("User", userSchema);
-export default User;
+const CartItem = mongoose.model("CartItem", cartItemSchema);
+export default CartItem;
